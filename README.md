@@ -40,5 +40,5 @@ The version below 4 may cannot work.
 
 ## Download
 
-You can download from [Packal](http://www.packal.org/workflow/chrome-workspace) or click [here](https://github.com/hzh-cocong/Time-Helper/releases/download/v1.0.0/Chrome.Workspace.alfredworkflow)
+You can download from [Packal](http://www.packal.org/workflow/chrome-workspace) or click [here](https://github.com/hzh-cocong/Chrome-Workspace/releases/download/v1.0.0/Chrome.Workspace.alfredworkflow)
 
