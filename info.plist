@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>chrome.workspace.cocong.cn</string>
+	<key>category</key>
+	<string>Share</string>
+	<key>connections</key>
+	<dict>
+		<key>485B1DCB-FD12-4839-8A49-790A741C9D45</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>93570CAA-1D4C-4E29-851B-6025959A49A3</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>hzh</string>
+	<key>description</key>
+	<string>A alfred workflow for the chrome extension of savetabs.</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Chrome Workspace</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>anchorfields</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>daterange</key>
+				<integer>0</integer>
+				<key>fields</key>
+				<array>
+					<dict>
+						<key>field</key>
+						<string>kMDItemDisplayName</string>
+						<key>not</key>
+						<false/>
+						<key>split</key>
+						<true/>
+						<key>value</key>
+						<string>{query}</string>
+						<key>words</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>field</key>
+						<string>kMDItemDisplayName</string>
+						<key>not</key>
+						<false/>
+						<key>split</key>
+						<false/>
+						<key>value</key>
+						<string>*.tabs.html</string>
+						<key>words</key>
+						<true/>
+					</dict>
+				</array>
+				<key>includesystem</key>
+				<false/>
+				<key>keyword</key>
+				<string>tabs</string>
+				<key>limit</key>
+				<integer>0</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>scopes</key>
+				<array>
+					<string>~</string>
+				</array>
+				<key>sortmode</key>
+				<integer>0</integer>
+				<key>subtext</key>
+				<string>*{query}*.tabs.html</string>
+				<key>title</key>
+				<string>Find Chrome Workspace File like below</string>
+				<key>types</key>
+				<array>
+					<string>public.html</string>
+				</array>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.filefilter</string>
+			<key>uid</key>
+			<string>485B1DCB-FD12-4839-8A49-790A741C9D45</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>applescript</key>
+				<string>on alfred_script(q)
+  
+  tell application "Google Chrome"
+    tell (make new window)
+      set _url to "file://" &amp; q
+      set URL of active tab to _url
+    end tell
+  end tell
+
+end alfred_script</string>
+				<key>cachescript</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.applescript</string>
+			<key>uid</key>
+			<string>93570CAA-1D4C-4E29-851B-6025959A49A3</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>A alfred workflow for the chrome extension of [savetabs](https://github.com/hzh-cocong/SaveTabs).
+
+It can search the file like ***\*.tabs.html*** and create a new chrome browser window to open it.
+
+It works like a workspace, so I named it a ***Chrome Workspace***.</string>
+	<key>uidata</key>
+	<dict>
+		<key>485B1DCB-FD12-4839-8A49-790A741C9D45</key>
+		<dict>
+			<key>note</key>
+			<string>1. This File Filter is set to present folders only, so type "f" followed by the name of your folder. The scope is set to home folder only.</string>
+			<key>xpos</key>
+			<integer>155</integer>
+			<key>ypos</key>
+			<integer>180</integer>
+		</dict>
+		<key>93570CAA-1D4C-4E29-851B-6025959A49A3</key>
+		<dict>
+			<key>xpos</key>
+			<integer>440</integer>
+			<key>ypos</key>
+			<integer>180</integer>
+		</dict>
+	</dict>
+	<key>variablesdontexport</key>
+	<array/>
+	<key>version</key>
+	<string>1.0.0</string>
+	<key>webaddress</key>
+	<string>www.cocong.cn</string>
+</dict>
+</plist>
